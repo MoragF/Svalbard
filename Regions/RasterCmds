@@ -1,0 +1,10 @@
+gdal_rasterize -burn 1 -tr 0.036 0.009  -where "TermType='1' AND O2Region='1'" 07_rgi60_Svalbard.shp 07_rgi60_Svalbard_marine_MF.tif
+
+gdal_rasterize -burn 1 -tr 0.036 0.009  -where "TermType='0' AND O2Region='1'" 07_rgi60_Svalbard.shp 07_rgi60_Svalbar_land_MF.tif
+
+gdal_rasterize -burn 1 -tr 0.036 0.009  -where "TermType='0' AND O2Region='1' AND Aspect>180" 07_rgi60_Svalbard.shp 07_rgi60_Svalbard_landE.tif
+
+ogrinfo -al -ro -so 09_rgi60_RussianArctic.shpd
+
+
+gdal_rasterize -burn 1 -tr 0.036 0.009  -where "RGIId='RGI60-07.00026' AND O2Region='1'" 07_rgi60_Svalbard.shp 07_rgi60_basin3_MF.tif

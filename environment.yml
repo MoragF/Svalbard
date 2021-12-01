@@ -1,0 +1,17 @@
+name: myenv
+channels:
+ - conda-forge
+dependencies:
+ - python=3.8
+ - ipython
+ - jupyter
+ - numpy
+ - matplotlib
+ - pandas
+ - geopandas
+ - cartopy=0.18
+ - xarray
+ - netcdf4
+ - descartes
+
+

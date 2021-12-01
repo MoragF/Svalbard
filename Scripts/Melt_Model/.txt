@@ -1,0 +1,16 @@
+
+
+get_drainagebasins.m does the hydrological flow routing to define glacier drainage basins, but as previously discussed the RGI outlines are totally fine
+
+get_basalmelting.m estimates basal melting from friction
+
+get_oceanpoints.m is the rather involved algorithm that finds the ‘best’ ocean model grid point for each glacier. As previously discussed there may be simpler ways to do this (e.g. closest point of a given depth)
+
+get_runoff.m sums the RACMO runoff over the drainage basins
+
+get_ocean_ASTE.py reads in the ocean time series from ASTE for each glacier
+
+finalise_ocean.m does some finalising of the ocean properties
+
+finalise_glaciers.m does the calculation of the submarine melt rate and throws away glaciers without enough data
+
